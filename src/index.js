@@ -12,6 +12,7 @@ http
     var url = req.url;
     var method = req.method;
     res.setHeader("Content-Type", "application/json");
+    
     if (url.startsWith("/users")) {
       if (method === "GET") {
         res.write(JSON.stringify(users));
@@ -32,6 +33,7 @@ http
         req.on("data", chunk => {
           body += chunk.toString(); // convert Buffer to string
         });
+        
         req.on("end", () => {
           var id = url.split("/")[2];
           var user = users.find(el => {
