@@ -1,6 +1,7 @@
+'use strict'
 const bcrypt = require('bcrypt');
 
-encryptPassword = async function(obj){
+async function encryptPassword(obj){
     const salt = await bcrypt.genSalt(process.env.SALT_ROUNDS || 10);
     return await bcrypt.hash(obj.password, salt)
 }

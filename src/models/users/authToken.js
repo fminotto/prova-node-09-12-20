@@ -1,3 +1,4 @@
+'use strict'
 const { DataTypes } = require('sequelize');
 const jwt = require('jsonwebtoken');
 module.exports = (sequelize) => {

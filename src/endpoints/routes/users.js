@@ -1,3 +1,4 @@
+'use strict'
 const usersController = require('../../controllers/usersController')
 const usersModel = require('../../models/users/usersModel');
 
