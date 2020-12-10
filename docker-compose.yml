@@ -14,7 +14,7 @@ services:
       - "44340:44340"
     networks: 
       - backend    
-    env_file: ./.env
+    env_file: ./.env.docker
     environment:
       - MYSQL_USER=root
       - MYSQL_DATABASE=helpper
@@ -27,7 +27,6 @@ services:
     container_name: mysql
     volumes:
       - ./data/db:/var/lib/mysql
-      - ./dump:/docker-entrypoint-initdb.d
     restart: always
     ports:
       - "3307:3306"

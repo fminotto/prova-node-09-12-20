@@ -1,9 +1,7 @@
 'use strict'
 const usersController = require('../../controllers/usersController')
-const usersModel = require('../../models/users/usersModel');
 
-module.exports = function (db, auth, apiRoutes) {    
-    let users = new usersModel(db).getInstance();
+module.exports = function (db, auth, apiRoutes, users) {    
     let verifyToken = new auth().verifyToken;
     
     apiRoutes.post('/signin', (req, res) => {
