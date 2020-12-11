@@ -1,8 +1,8 @@
 'use strict'
 const { DataTypes } = require('sequelize');
 const jwt = require('jsonwebtoken');
-module.exports = (sequelize) => {
 
+module.exports = (sequelize) => {
     const AuthToken = sequelize.define('AuthToken', {
       token: {
         type: DataTypes.STRING,
